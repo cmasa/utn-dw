@@ -1,67 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Quicksand:wght@300..700&family=Tilt+Neon&display=swap');
 
-:root{
+:root {
     --text-main-color: white;
     --text-alternative-color: black;
     --main-font: "Quicksand", sans-serif;
-    --title-font: "Righteous", sans-serif;
-    --bg-color: #3d0d52;
-    --bg-color-alt: #7d188b;
+    --neon-font-title: "Neonderthaw", cursive;
+    --neon-font-subtitle: "Tilt Neon", sans-serif;
+    --bg-color:  #100e1a;
+    --text-shadow-title: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    --text-shadow-subtitle: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+    --box-shadow-purple: 0 0 .2rem #fff,  0 0 .2rem #fff,  0 0 2rem #bc13fe,  0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.nav-link{
-    font-family: var(--main-font);
-    font-weight: bold;
+.navbar {
+    border-radius: 5px;
+    background: rgba(159, 86, 137, 0.18) !important;
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    text-shadow: var(--text-shadow-title);
+    border: 0.2rem solid #fff;
+    border-radius: 1.5rem;
+    box-shadow: var(--box-shadow-purple);
 }
 
-p{
+.nav-link {
+    color: var(--text-main-color);
+    font-family: var(--neon-font-subtitle);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    display: flex;
+    align-items: center;
+    background-image: none !important;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3px;
+    font-family: var(--neon-font-subtitle);
+    color: var(--text-main-color);
+    text-shadow: var(--text-shadow-title);
+}
+
+p {
     color: var(--text-main-color);
     font-family: var(--main-font);
 }
 
-h1{
-    color: var(--text-main-color);
-    font-family: var(--title-font);
-    font-size: 3rem;
-    text-transform: uppercase;
-}
-h2, h3{
-    color: var(--text-main-color);
-    font-family: var(--main-font);
+h1 {
+    font-size: 5.5rem;
+    text-shadow: var(--text-shadow-title);
+    color: #fff6a9;
+    font-family: "Sacramento", cursive;
+    font-family: var(--neon-font-title);
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+
 }
 
-body{
-    /* background-image: url(/img/pattern.svg);
-    background-size:cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center bottom; */
+h2,
+h3 {
+    color: var(--text-main-color);
+    font-family: var(--neon-font-subtitle);
+    text-shadow: var(--text-shadow-subtitle);
+}
+
+body {
     max-width: 1400px;
     background-color: var(--bg-color);
+    background-image: url("../img/brick-wall-dark.png");
     margin: 0 auto;
 }
 
-section{
+section {
     margin-top: 50px;
 }
 
-.sec-odd{
-    background-color:var(--bg-color-alt);
-}
-
-#img-dev{
+#img-dev {
     max-height: 300px;
     min-width: 175px;
-    filter: drop-shadow(10px 10px 5px #222);
+    filter: drop-shadow(10px 10px 5px rgb(54, 53, 53));
 }
 
-.div-skill{
+.div-skill {
     background-color: #eee;
     padding-top: 25px;
     margin-top: 10px;
@@ -69,33 +99,60 @@ section{
     margin-right: 5px;
     max-width: 120px;
     min-width: 120px;
-    -webkit-box-shadow: 14px 10px 25px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 14px 10px 25px 1px rgba(0,0,0,0.75);
-    box-shadow: 14px 10px 25px 1px rgba(0,0,0,0.75);
-    border-radius: 25px 25px 25px 25px;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow-purple);
 }
 
-.div-skill p{
+.div-skill p {
     color: var(--text-alternative-color);
     margin-top: 5px;
     font-weight: bold;
 }
 
-.div-skill img{
+.div-skill img {
     height: 40px;
 }
 
-.card{
-    -webkit-box-shadow: 14px 10px 25px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 14px 10px 25px 1px rgba(0,0,0,0.75);
-    box-shadow: 14px 10px 25px 1px rgba(0,0,0,0.75);
+.card {
+    box-shadow: 2px -2px 7px 5px #FF1493, -2px 2px 7px 5px #0CFFF4;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
     transition: all 0.5s;
 }
 
-.card-text{
+.card-text {
     color: var(--text-alternative-color);
+}
+
+.btn {
+    font-family: var(--neon-font-subtitle);
+}
+
+footer{
+    text-shadow: var(--text-shadow-title);
+}
+
+/* ANIMACIONES */
+@keyframes blink {
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #fff6a9;
+    }
 }
